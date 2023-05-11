@@ -10,7 +10,9 @@ body {
 }
 
 #wrapper {
-    width: 100vw;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
@@ -29,7 +31,7 @@ button {
     width: 18%;
 }
 
-#input {
+.input,.texts {
     width: 60%;
     height: 5vh;
 }
@@ -39,21 +41,65 @@ button {
     margin: 5px 0;
     border: 1px solid black;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.897);
     position: relative;
     height: 5vh;
     color: white;
     text-align: center;
 }
-
-.listelements>button:first-child,
-.listelements>button:nth-of-type(2) {
-    position: absolute;
-    right: 1px;
-    height: 100%;
-    width: 18%;
+.texts{
+    display: flex;
+    align-items: center;
+}
+#list{
+    display: block;
+    height: 30vh;
+    overflow-y: scroll;
+    
 }
 
-.listelements>button:nth-of-type(2) {
-    margin-right: 80px;
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+
+::-webkit-scrollbar-track {
+
+    border-radius: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+    border-radius: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #898989; 
+  }
+
+@media screen and (max-width:736px){
+    body button,.listelements{
+    font-size: 0.5em;
+    }    
+    .listelements .texts{
+        font-size: 1.5em;
+    }
+    h1{
+        font-size: 80%;
+    }
+}
+@media screen and (max-width:450px){
+    body button,.listelements{
+    font-size: 4px;
+    font-weight: bolder;
+    }    
+    .listelements .texts{
+        font-size: 2em;
+    }
+    h1{
+        font-size: 80%;
+    }
 }
